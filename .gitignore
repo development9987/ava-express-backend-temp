@@ -1,7 +1,7 @@
 node_modules
 /node_modules
 /uploads
-.env
-/config/database.json
-/bin/database.json
+#.env
+#/config/database.json
+#/bin/database.json
 .package-lock.json

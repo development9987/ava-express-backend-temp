@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "dev": "nodemon --watch .env --watch app.js --watch bin ./bin/www --watch controller --watch db --watch routes --watch core --watch config --watch services",
+    "start": "node ./bin/www",
+    "dev": "node --watch .env --watch app.js --watch bin ./bin/www --watch controller --watch db --watch routes --watch core --watch config --watch services",
     "db": "sequelize init",
     "db:migrate": "sequelize db:migrate",
     "db:seed": "npx sequelize-cli db:seed:all",

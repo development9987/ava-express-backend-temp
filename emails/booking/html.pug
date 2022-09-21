@@ -1,0 +1,163 @@
+doctype transitional
+html(xmlns='http://www.w3.org/1999/xhtml')
+    head
+        link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet")
+        style(type='text/css').
+            * {
+                margin: 0;
+                box-sizing: border-box;
+                color: #1C2833;
+                font-family: 'Poppins', sans-serif;
+            }
+            body {
+                -webkit-font-smoothing: antialiased;
+                -webkit-text-size-adjust: none;
+                width: 100% !important;
+                height: 100%;
+                background-color: #bbb;
+                font-size: 14px;
+            }
+            /* Let's make sure all tables have defaults */
+            table td {
+                vertical-align: middle;
+            }
+            /* -------------------------------------
+            BODY & CONTAINER
+            ------------------------------------- */
+            .body-wrap {
+                width: 100%;
+            }
+
+            .container {
+                display: block !important;
+                max-width: 600px !important;
+                margin: 0 auto !important;
+                clear: both !important;
+            }
+            /* -------------------------------------
+            HEADER, FOOTER, MAIN
+            ------------------------------------- */
+            .main {
+                background-color: #fff;
+                border: 0 !important;
+                border-radius: 3px;
+                padding: 15px;
+            }
+
+            .email-logo__wrapper{
+                height: 80px;
+                padding: 10px;
+            }
+
+            .email-body__wrapper{
+                width: 100%;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .email-footer__wrapper{
+                width: 100%;
+                clear: both;
+                padding: 10px 20px;
+                border-top: 1px solid #A3A3A3
+            }
+            .email-footer__wrapper p {
+                color: #A3A3A3;
+                font-size: 12px;
+            }
+
+            .content-title__wrapper{
+                font-size: 20px;
+                font-weight: 500;
+                padding: 5px 0 20px;
+            }
+
+            /* -------------------------------------
+            TYPOGRAPHY
+            ------------------------------------- */
+            p, ul, ol {
+                margin-bottom: 5px;
+                font-weight: normal;
+            }
+            p li, ul li, ol li {
+                margin-left: 5px;
+                list-style-position: inside;
+            }
+            /* -------------------------------------
+            LINKS & BUTTONS
+            ------------------------------------- */
+            a {
+                color: #08f;
+                text-decoration: none;
+            }
+            .btn-primary {
+                display: inline-block;
+                color: #FFF;
+                font-size: 15px;
+                font-weight: 600;
+                text-align: center;
+                cursor: pointer;
+                padding: 12px 25px;
+                border-radius: 3px;
+                background-color: #08f;
+                text-decoration: none;
+            }
+
+            /* -------------------------------------
+            RESPONSIVE AND MOBILE FRIENDLY STYLES
+            ------------------------------------- */
+            @media only screen and (max-width: 640px) {
+                body {
+                    padding: 0 !important;
+                }
+                h1, h2, h3, h4 {
+                    font-weight: 800 !important;
+                    margin: 20px 0 5px !important;
+                }
+                h1 {
+                    font-size: 22px !important;
+                }
+                h2 {
+                    font-size: 18px !important;
+                }
+                h3 {
+                    font-size: 16px !important;
+                }
+                .container {
+                    padding: 0 !important;
+                    width: 100% !important;
+                }
+            }
+
+    body
+        table.body-wrap
+            tbody
+                tr
+                    td
+                    td.container(width='600')
+                        table.main(width='100%' cellpadding='0' cellspacing='0')
+                            tr
+                                td.email-logo__wrapper
+                                    img(src="http://avamgt.com/dark_logo.png" alt="" style="width: 100px;height:35px")
+                            tr
+                                td.email-body__wrapper
+                                    table(width='100%' cellpadding='0' cellspacing='0')
+                                        tr
+                                            td.content-title__wrapper
+                                                span| Hi #[b #{customer_name}]!
+                                        tr
+                                            td(style="padding-bottom: 20px;")
+                                                p|You've been scheduled for an appointment #{time} at #{name}.
+                                                p|Manage your appointment here.
+                                                p|We look forward to serve you soon!
+                                                p|#{name}
+                                        tr
+                                            td(style="padding-bottom: 20px;")
+                                                a(href=`http://avamgt.com/`+link).btn-primary MANAGE BOOKING        
+                            tr
+                                td.email-footer__wrapper
+                                    p.
+                                        Contact@
+                                    p.
+                                        Avamgt Digital Example ... Canada
+                    td
